@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    line-height: 16.41px;
+    font-size: 14px;
+}
+
+body {
+    display: grid;
+    width: 1440px;
+
+    grid-template-areas: 
+    'a a a a a a a a'
+    'b c c c c c c c'
+    'b c c c c c c c'
+    'b c c c c c c c';
+}
+
+
+.header {
+    grid-area: a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px 0 24px;
+    height: 56px;
+}
+
+.header .left {
+    display: flex;
+    justify-content: space-between;
+    width: 146px;
+    height: 24px;
+    align-items: center;
+}
+
+.header .left .menu-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.header .left .youtube-logo {
+    width: 90px;
+    height: 20px;
+}
+
+.header .center {
+    width: 404px;
+    height: 40px;
+    border: 1px solid #cccccc;
+}
+
+.header .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+    height: 34px;
+}
+
+.header .right img {
+    width: 24px;
+    height: 24px;
+}
+
+.header .right .profile-avatar {
+    width: 34px;
+    height: 34px;
+}
+
+.menu {
+    grid-area: b;
+    display: grid;
+    grid-template-rows: repeat(11, 24px) 1fr;
+    padding: 24px;
+    line-height: 16.41px;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 22px;
+    width: 218px;
+}
+
+.menu img {
+    width: 24px;
+    height: 24px;
+}
+
+.menu div {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.video-list {
+    grid-area: c;
+    display: grid;
+    grid-auto-columns: 282px;
+    grid-auto-rows: 262px;
+    grid-template-columns: repeat(4, 282px);
+    padding: 24px;
+    gap: 16px;
+    background-color: #f9f9f9;
+}
+
+.video-list .video {
+    display: grid;
+    width: 282px;
+    height: 262px;
+    border-radius: 4px;
+    padding: 16px;
+    gap: 16px;
+}
+
+.video-list .video img {
+    width: 250px;
+    height: 140.29px;
+}
+
+.video-list .video .channel {
+    display: grid;
+    width: 249px;
+    max-height: 74px;
+    gap: 10px;
+    justify-items: left;
+    grid-template-areas: 
+    'profile description description';
+}
+
+.video-list .video .channel img {
+    width: 42px;
+    height: 42px;
+    grid-area: profile;
+}
+
+.video-list .video .channel .video-description{
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.video-list .video .channel .video-title {
+    grid-area: title;
+    font-weight: 700;
+}
+
+.video-list .video .channel .video-statistic {
+    grid-area: stats;
+    font-size: 12px;
+    font-weight: 400;
+    color: #515151;
+}
